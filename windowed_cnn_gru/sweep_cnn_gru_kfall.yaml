@@ -1,0 +1,44 @@
+program: train.py
+method: grid
+project: kask-generation
+name: kfall_temporal_cnn_gru_grid
+metric:
+  name: val/macro_f1
+  goal: maximize
+command:
+  - ${env}
+  - /home/yildirim26/kask_dusme_generation/.venv/bin/python
+  - ${program}
+  - --dataset
+  - KFall_temporal
+  - --data-path
+  - datasets/kfall
+  - --wandb_project
+  - kask-generation
+  - --run_name
+  - cnn_gru_kfall_temporal_sweep
+parameters:
+  lr:
+    values: [0.01, 0.005, 0.001, 0.0005, 0.0001, 0.00005]
+  dropout:
+    values: [0.6, 0.7, 0.8, 0.9]
+  batch_size:
+    values: [16, 32]
+  weight_decay:
+    values: [0.0001]
+  cnn_filters:
+    values: [16, 32, 64, 128]
+  gru_hidden:
+    values: [32, 64, 128]
+  gru_layers:
+    values: [1, 2, 3]
+  epochs:
+    values: [200]
+  early_stopping_patience:
+    values: [50]
+  window_size:
+    values: [256]
+  stride:
+    values: [128]
+  fall_threshold:
+    values: [0.10]

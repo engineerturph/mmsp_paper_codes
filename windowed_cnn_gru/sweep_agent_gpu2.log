@@ -1,0 +1,143 @@
+wandb: Starting wandb agent 🕵️
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/yildirim26/.netrc.
+2026-05-22 14:33:11,391 - wandb.wandb_agent - INFO - Running runs: []
+2026-05-22 14:33:11,995 - wandb.wandb_agent - INFO - Agent received command: run
+2026-05-22 14:33:11,995 - wandb.wandb_agent - INFO - Agent starting run with config:
+	activity_mode: all
+	batch_size: 32
+	cnn_filters: 64
+	dataset: SisFall+KFall
+	dropout: 0.6
+	early_stopping_patience: 50
+	epochs: 200
+	gru_hidden: 64
+	gru_layers: 1
+	lr: 0.001
+	stride: 100
+	weight_decay: 0.0001
+	window_size: 200
+2026-05-22 14:33:11,999 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env /home/yildirim26/kask_dusme_generation/.venv/bin/python train.py --wandb_project kask-generation --activity_mode=all --batch_size=32 --cnn_filters=64 --dataset=SisFall+KFall --dropout=0.6 --early_stopping_patience=50 --epochs=200 --gru_hidden=64 --gru_layers=1 --lr=0.001 --stride=100 --weight_decay=0.0001 --window_size=200
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/yildirim26/.netrc.
+wandb: Currently logged in as: engineerturph (engineerturph-y-ld-z-technical-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignoring project 'kask-generation' when running a sweep.
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /home/yildirim26/kask_dusme_generation/windowed_generated_vs_nongenerated/wandb/run-20260522_143315-a4kz2uga
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run cnn_gru_sisfall_temporal_ws256_s128
+wandb: ⭐️ View project at https://wandb.ai/engineerturph-y-ld-z-technical-university/kask-generation
+wandb: 🧹 View sweep at https://wandb.ai/engineerturph-y-ld-z-technical-university/kask-generation/sweeps/qpv674k7
+wandb: 🚀 View run at https://wandb.ai/engineerturph-y-ld-z-technical-university/kask-generation/runs/a4kz2uga
+2026-05-22 14:33:17,006 - wandb.wandb_agent - INFO - Running runs: ['a4kz2uga']
+wandb: WARNING Config item 'dataset' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'epochs' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'batch_size' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'window_size' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'stride' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'activity_mode' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'lr' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'weight_decay' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'dropout' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'cnn_filters' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'gru_hidden' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'gru_layers' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'early_stopping_patience' was locked by 'sweep' (ignored update).
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json
+wandb: uploading history steps 78-79, summary, console lines 33-33
+wandb: 
+wandb: Run history:
+wandb:                best_epoch ▁
+wandb:      best_val_weighted_f1 ▁
+wandb:                     epoch ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇██
+wandb:            epoch_time_sec ▇▅▃▆▇▄▇▇▅▇█▇▇▆▅▇█▇▇▇▇▁▃▁█▇▇▇▇▇▇▇▇▇▆▃▅▇▇▇
+wandb:                        lr ██████████▄▄▄▄▄▄▃▃▃▃▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            train/accuracy ▁▄▄▄▅▅▅▅▅▅▅▆▆▆▇▇▇▇▇▇████████████████████
+wandb:        train/aftermath_f1 ▂▁▅▅▅▄▅▅▆▇▅▅▆▆▆▆▅▆▇▅▇▆▇█▇▇▇▇▇▇▇▇█▇██▇▇██
+wandb: train/aftermath_precision ▁▂▅▂▂▃▄▃▄▃▅▆▆▅▅▅▆▅▇▇▆▆▇▇▆██████▇██▇█████
+wandb:    train/aftermath_recall ▂▁▆▅▅▄▆▅▁▇▆▅▆▆▇▆▅▆█▆▇▇█▆█▇▇▇▇▇██▇██▇▇█▇▇
+wandb:   train/aftermath_support ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                      +107 ...
+wandb: 
+wandb: Run summary:
+wandb:                best_epoch 29
+wandb:      best_val_weighted_f1 0.8194
+wandb:                     epoch 79
+wandb:            epoch_time_sec 33.93486
+wandb:                        lr 0.0
+wandb:            train/accuracy 0.86663
+wandb:        train/aftermath_f1 0.58462
+wandb: train/aftermath_precision 0.65309
+wandb:    train/aftermath_recall 0.52915
+wandb:   train/aftermath_support 9090
+wandb:                      +107 ...
+wandb: 
+wandb: 🚀 View run cnn_gru_sisfall_lr0.001_do0.6_cf64_gh64_gl1_bs32 at: https://wandb.ai/engineerturph-y-ld-z-technical-university/kask-generation/runs/a4kz2uga
+wandb: ⭐️ View project at: https://wandb.ai/engineerturph-y-ld-z-technical-university/kask-generation
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260522_143315-a4kz2uga/logs
+Device: cuda:0
+Model parameters: 66,060
+Train windows: 83668 | Val windows: 28268
+Train class counts: {'walking': 2184, 'jogging': 2106, 'walking_stairs_updown': 8931, 'stumble_while_walking': 90, 'fall_recovery': 1043, 'fall_initiation': 1294, 'impact': 1294, 'aftermath': 9090, 'other_adl': 39575, 'other_fall_initiation': 1834, 'other_impact': 1834, 'other_aftermath': 14393}
+Val class counts: {'walking': 780, 'jogging': 780, 'walking_stairs_updown': 3081, 'stumble_while_walking': 30, 'fall_recovery': 331, 'fall_initiation': 355, 'impact': 355, 'aftermath': 2726, 'other_adl': 13951, 'other_fall_initiation': 502, 'other_impact': 502, 'other_aftermath': 4875}
+Epoch 001/200 | train_loss=0.6394 | val_loss=0.6361 | val_macro_f1=0.5491 | val_weighted_f1=0.7653 | lr=1.00e-03
+Epoch 005/200 | train_loss=0.4867 | val_loss=0.5301 | val_macro_f1=0.5951 | val_weighted_f1=0.7893 | lr=1.00e-03
+Epoch 010/200 | train_loss=0.4356 | val_loss=0.5114 | val_macro_f1=0.6744 | val_weighted_f1=0.8056 | lr=1.00e-03
+Epoch 015/200 | train_loss=0.4079 | val_loss=0.4957 | val_macro_f1=0.7097 | val_weighted_f1=0.8152 | lr=1.00e-03
+Epoch 020/200 | train_loss=0.4019 | val_loss=0.5060 | val_macro_f1=0.6904 | val_weighted_f1=0.8083 | lr=1.00e-03
+Epoch 025/200 | train_loss=0.3619 | val_loss=0.5361 | val_macro_f1=0.7122 | val_weighted_f1=0.8135 | lr=5.00e-04
+Epoch 030/200 | train_loss=0.3471 | val_loss=0.5324 | val_macro_f1=0.7176 | val_weighted_f1=0.8127 | lr=5.00e-04
+Epoch 035/200 | train_loss=0.3364 | val_loss=0.5723 | val_macro_f1=0.7164 | val_weighted_f1=0.8114 | lr=5.00e-04
+Epoch 040/200 | train_loss=0.3204 | val_loss=0.5967 | val_macro_f1=0.7197 | val_weighted_f1=0.8143 | lr=2.50e-04
+Epoch 045/200 | train_loss=0.3099 | val_loss=0.6373 | val_macro_f1=0.7214 | val_weighted_f1=0.8125 | lr=1.25e-04
+Epoch 050/200 | train_loss=0.3063 | val_loss=0.6422 | val_macro_f1=0.7196 | val_weighted_f1=0.8111 | lr=6.25e-05
+Epoch 055/200 | train_loss=0.3024 | val_loss=0.6537 | val_macro_f1=0.7242 | val_weighted_f1=0.8131 | lr=3.13e-05
+Epoch 060/200 | train_loss=0.3030 | val_loss=0.6400 | val_macro_f1=0.7183 | val_weighted_f1=0.8114 | lr=1.56e-05
+Epoch 065/200 | train_loss=0.3133 | val_loss=0.6442 | val_macro_f1=0.7225 | val_weighted_f1=0.8133 | lr=1.56e-05
+Epoch 070/200 | train_loss=0.3000 | val_loss=0.6530 | val_macro_f1=0.7243 | val_weighted_f1=0.8135 | lr=7.81e-06
+Epoch 075/200 | train_loss=0.3017 | val_loss=0.6595 | val_macro_f1=0.7178 | val_weighted_f1=0.8119 | lr=3.91e-06
+Early stopping at epoch 79: no val_weighted_f1 improvement for 50 epochs.
+Best epoch: 29 | best val weighted F1: 0.8194
+Saved model: /home/yildirim26/kask_dusme_generation/windowed_generated_vs_nongenerated/results/best_model_cnn_gru_sisfall_lr0.001_do0.6_cf64_gh64_gl1_bs32.pt
+Saved history: /home/yildirim26/kask_dusme_generation/windowed_generated_vs_nongenerated/results/history_cnn_gru_sisfall_lr0.001_do0.6_cf64_gh64_gl1_bs32.json
+2026-05-22 15:15:23,555 - wandb.wandb_agent - INFO - Cleaning up finished run: a4kz2uga
+2026-05-22 15:15:24,295 - wandb.wandb_agent - INFO - Agent received command: run
+2026-05-22 15:15:24,296 - wandb.wandb_agent - INFO - Agent starting run with config:
+	activity_mode: all
+	batch_size: 16
+	cnn_filters: 32
+	dataset: SisFall+KFall
+	dropout: 0.4
+	early_stopping_patience: 50
+	epochs: 200
+	gru_hidden: 64
+	gru_layers: 1
+	lr: 0.0005
+	stride: 100
+	weight_decay: 0.0001
+	window_size: 200
+2026-05-22 15:15:24,301 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env /home/yildirim26/kask_dusme_generation/.venv/bin/python train.py --wandb_project kask-generation --activity_mode=all --batch_size=16 --cnn_filters=32 --dataset=SisFall+KFall --dropout=0.4 --early_stopping_patience=50 --epochs=200 --gru_hidden=64 --gru_layers=1 --lr=0.0005 --stride=100 --weight_decay=0.0001 --window_size=200
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/yildirim26/.netrc.
+wandb: Currently logged in as: engineerturph (engineerturph-y-ld-z-technical-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: WARNING Ignoring project 'kask-generation' when running a sweep.
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /home/yildirim26/kask_dusme_generation/windowed_generated_vs_nongenerated/wandb/run-20260522_151527-kh3njlkv
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run cnn_gru_sisfall_temporal_ws256_s128
+wandb: ⭐️ View project at https://wandb.ai/engineerturph-y-ld-z-technical-university/kask-generation
+wandb: 🧹 View sweep at https://wandb.ai/engineerturph-y-ld-z-technical-university/kask-generation/sweeps/qpv674k7
+wandb: 🚀 View run at https://wandb.ai/engineerturph-y-ld-z-technical-university/kask-generation/runs/kh3njlkv
+2026-05-22 15:15:29,308 - wandb.wandb_agent - INFO - Running runs: ['kh3njlkv']
+wandb: WARNING Config item 'dataset' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'epochs' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'batch_size' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'window_size' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'stride' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'activity_mode' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'lr' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'weight_decay' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'dropout' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'cnn_filters' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'gru_hidden' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'gru_layers' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'early_stopping_patience' was locked by 'sweep' (ignored update).

@@ -1,0 +1,4 @@
+windowed_cnn_gru/wandb/
+windowed_cnn_gru/results/
+__pycache__/
+*.pyc

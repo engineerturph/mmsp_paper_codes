@@ -1,0 +1,41 @@
+program: train.py
+method: random
+project: kask-generation
+name: ultimate_sweep
+metric:
+  name: best_val_weighted_f1
+  goal: maximize
+command:
+  - ${env}
+  - /home/yildirim26/kask_dusme_generation/.venv/bin/python
+  - ${program}
+  - --wandb_project
+  - kask-generation
+  - ${args}
+parameters:
+  dataset:
+    values: ["SisFall+KFall"]
+  activity_mode:
+    values: ["strict", "all"]
+  lr:
+    values: [0.01, 0.005, 0.001, 0.0005, 0.0001, 0.00005]
+  dropout:
+    values: [0.2, 0.4, 0.6, 0.8]
+  batch_size:
+    values: [16, 32]
+  weight_decay:
+    values: [0.0001]
+  cnn_filters:
+    values: [16, 32, 64]
+  gru_hidden:
+    values: [32, 64]
+  gru_layers:
+    values: [1, 2]
+  epochs:
+    values: [200]
+  early_stopping_patience:
+    values: [50]
+  window_size:
+    values: [200]
+  stride:
+    values: [100]
